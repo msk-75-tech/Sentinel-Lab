@@ -1,3 +1,1 @@
-# 01 Wazuh Install
-
-Placeholder content for Wazuh installation guide.
+# Phase 1 — Déploiement du serveur Wazuh
