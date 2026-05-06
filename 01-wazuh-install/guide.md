@@ -192,7 +192,6 @@ ip a
 Cette configuration permet au serveur Wazuh d’être accessible en permanence par les autres machines du laboratoire.
 
 
-
 ---
 
 ## Optimisation du stockage des journaux
@@ -223,3 +222,75 @@ sudo systemctl restart systemd-journald
 * conservation d’un historique pertinent
 
 Cette optimisation est particulièrement importante dans un environnement de laboratoire où le volume de logs peut rapidement augmenter.
+
+---
+
+## Installation de Wazuh
+
+Wazuh est installé à l’aide du script officiel fourni par l’éditeur. Cette méthode permet un déploiement rapide et complet de tous les composants nécessaires.
+
+### Téléchargement du script
+
+```bash
+curl -sO https://packages.wazuh.com/4.7/wazuh-install.sh
+```
+
+### Exécution du script
+
+```bash
+sudo bash wazuh-install.sh -a
+```
+
+### Composants installés
+
+Cette installation en mode « all-in-one » déploie automatiquement :
+
+* Wazuh Manager : collecte et analyse des logs
+* Wazuh Indexer : stockage et indexation des données
+* Wazuh Dashboard : interface web de visualisation
+
+### Durée de l’installation
+
+L’installation peut prendre entre 10 et 20 minutes en fonction des performances de la machine.
+
+Aucune action manuelle supplémentaire n’est nécessaire pendant l’exécution du script.
+
+
+---
+
+## Accès à l’interface Wazuh
+
+Une fois l’installation terminée, l’interface web est accessible depuis un navigateur :
+
+```
+https://192.168.56.10
+```
+
+Un avertissement de sécurité peut apparaître en raison de l’utilisation d’un certificat auto-signé.
+
+Il est possible de l’ignorer dans le cadre du laboratoire.
+
+### Accès
+
+Les identifiants de connexion sont affichés à la fin de l’installation dans le terminal.
+
+L’interface permet de :
+
+* visualiser les alertes
+* analyser les logs
+* superviser les machines connectées
+
+
+---
+
+## Vérification du fonctionnement
+
+Afin de vérifier que le serveur fonctionne correctement, il est possible de contrôler l’état du service principal :
+
+```bash
+sudo systemctl status wazuh-manager
+```
+
+Le service doit apparaître comme actif (running).
+
+Cette vérification confirme que le serveur est opérationnel.
