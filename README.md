@@ -62,7 +62,7 @@ Un espace supplémentaire est conservé pour les snapshots et les logs.
 
 * Wazuh (SIEM)
 * Sysmon
-* Ubuntu Server 22.04
+* Ubuntu Server 24.04
 * Windows 10
 * Kali Linux
 * VMware
