@@ -221,18 +221,109 @@ Connexion validée avec succès.
 
 ---
 
-## Captures réalisées
+## Captures de validation
 
-* Configuration VMware
-* Installation Ubuntu Server
-* Configuration réseau
-* Vérification de la connectivité Internet
-* Installation Wazuh
-* État des services Wazuh
-* Page de connexion du dashboard
-* Dashboard principal
-* Section Agents
-* État de la plateforme
+### Configuration de la machine virtuelle
+
+La machine virtuelle Wazuh a été configurée sous VMware avec les ressources définies pour le laboratoire.
+
+![Configuration VMware](01-vmware-config.png)
+
+---
+
+### Installation du système Ubuntu Server
+
+Installation du système d'exploitation Ubuntu Server utilisé comme base du serveur Wazuh.
+
+![Ubuntu Server](02-ubuntu-server.png)
+
+---
+
+### Configuration réseau
+
+Vérification de la configuration réseau et de l'attribution des adresses IP.
+
+![Configuration réseau](03-network-config.png)
+
+---
+
+### Vérification de la connectivité Internet
+
+Validation de l'accès Internet et de la résolution DNS avant l'installation de Wazuh.
+
+![Connectivité Internet](04-internet-connectivity.png)
+
+---
+
+### Installation de Wazuh
+
+Déploiement de la plateforme Wazuh à l'aide du script officiel.
+
+![Installation Wazuh](05-wazuh-installation.png)
+
+---
+
+### Vérification des services
+
+Validation du bon fonctionnement des composants principaux de la plateforme.
+
+#### Dashboard
+
+![Service Dashboard](06-wazuh-services-dashboard.png)
+
+#### Manager
+
+![Service Manager](07-wazuh-services-manager.png)
+
+#### Indexer
+
+![Service Indexer](09-wazuh-services-indexer.png)
+
+---
+
+### Authentification au Dashboard
+
+Page de connexion du tableau de bord Wazuh.
+
+![Connexion Dashboard](08-dashboard-login.png)
+
+---
+
+### Tableau de bord principal
+
+Vue générale de la plateforme après installation.
+
+![Dashboard Overview](10-dashboard-overview.png)
+
+---
+
+### Gestion des agents
+
+Aucun agent n'est encore enregistré à ce stade du projet.
+
+![Agents](11-agents-empty.png)
+
+---
+
+### État de la plateforme
+
+Vérification de l'état global des composants Wazuh.
+
+![Platform Status](12-platform-status.png)
+
+
+## Résultat
+
+L'installation du serveur Wazuh a été réalisée avec succès.
+
+Les trois composants principaux sont opérationnels :
+
+* Wazuh Manager
+* Wazuh Indexer
+* Wazuh Dashboard
+
+L'accès à l'interface web a été validé et la plateforme est prête à recevoir ses premiers agents.
+
 
 ---
 
